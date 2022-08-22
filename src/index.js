@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <NavBar />
-    <ItemListContainer />
+    <ItemListContainer itemQuantity="4" />
   </React.StrictMode>
 );

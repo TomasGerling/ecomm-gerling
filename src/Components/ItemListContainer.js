@@ -1,7 +1,7 @@
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
     return (
     <div className='cartWidget'>
-    <p>4</p>
+    <p>{props.itemQuantity}</p>
     </div>)
 }
 export default ItemListContainer
