@@ -43,13 +43,18 @@ div.gamesCategory ul{
 div.gamesCategory ul li{
   margin:0px 20px
 }
-div.loginUser{
+div.cartWidget{
   display: flex;
   grid-area: loginUser;
-  align-content: flex-end;
-  flex-direction: column;
+  align-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+div.cartWidget p{
+  margin-top: -60px;
+  margin-right: -15px;
 }
 .buttonNavBar {
   padding: 1.3em 3em;

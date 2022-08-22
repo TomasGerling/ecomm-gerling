@@ -1,7 +1,9 @@
 import logo from './logo.jpg';
 import './NavBar.css';
+import CartWidget from './CartWidget';
 
-function App() {
+
+function NavBar() {
   return (
     <header>
       <div className="NavBar">
@@ -22,11 +24,10 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className='loginUser'>
-            <p><a href='#'><button className='buttonNavBar'>Login</button></a></p>
+          <div className='cartWidget'><CartWidget />
           </div>
       </div>
     </header>
   );
 }
-export default App;
+export default NavBar;
