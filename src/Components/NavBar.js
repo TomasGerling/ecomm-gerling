@@ -24,7 +24,8 @@ function NavBar() {
               </li>
             </ul>
           </div>
-          <div className='cartWidget'><CartWidget />
+          <div className='cartWidget'>
+            <CartWidget />
           </div>
       </div>
     </header>
