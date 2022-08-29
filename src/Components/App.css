@@ -1,0 +1,39 @@
+.ProductAmountContainer{
+    display: grid;
+    width: 20%;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "circleMinus productAmount circlePlus"
+    "addCart addCart addCart"
+}
+
+.circlePlus{
+    display: flex;
+    justify-content: center;
+    grid-area: circlePlus;
+}
+.productAmount{
+    display: flex;
+    justify-content: center;
+    grid-area: productAmount;
+}
+.circleMinus{
+    display: flex;
+    justify-content: center;
+    grid-area: circleMinus;
+}
+.addCart{
+    grid-area: addCart;
+}
+
+div.ProductAmountContainer button{
+    background-color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 4px solid lighten(gray, 70%);
+}
