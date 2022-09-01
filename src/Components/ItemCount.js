@@ -17,11 +17,8 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
         if (count > initial)
         setCount(count - 1)
     }
-
-
 return (
-        <div>
-            <h4>Super Mario Bros</h4>
+        <>
             <div className="ProductAmountContainer">
                 <button className="circleMinus" variant="Text" onClick={decrement}>-</button>
             <div className= "productAmount">{count}</div>
@@ -32,7 +29,7 @@ return (
                 : <button variant="contained"></button>
             }
             </div>
-        </div>
+        </>
 );
 }
 export default ItemCount
