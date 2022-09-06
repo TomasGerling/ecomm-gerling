@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import ItemCount from "../Components/ItemCount"
 import desafio from "../utils/promesa"
-import infoGames from "../utils/Item"
+import Item from "../utils/Item"
 
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
+    
     useEffect(() =>{
-        desafio(infoGames)
+        desafio(Item)
             .then(result => setProducts(result))
             .catch(err => console.log(err))
     }, [])

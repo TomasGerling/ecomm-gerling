@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react"
 
+/**
+ * It's a function that returns a div with a button that increments a counter and a button that
+ * decrements the counter
+ * @returns The component is returning a JSX element.
+ */
 const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
     const [count, setCount] = useState(0);
     
