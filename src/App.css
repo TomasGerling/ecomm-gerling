@@ -1,5 +1,11 @@
 .productsList{
-    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-top: 10px;
+    list-style: none;
 }
 div.product {
     display: grid;
@@ -49,8 +55,6 @@ div.ProductAmountContainer button{
     border-radius: 5px;
     border-bottom: 4px solid lighten(gray, 70%);
 }
-
-
 
 .productImage {
     width: 50%;

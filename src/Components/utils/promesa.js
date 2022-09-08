@@ -5,7 +5,7 @@ let desafio = (task) => {
         if (is_ok) {
             setTimeout(()=>{
                 resolve(task)
-        }, 1000);
+        }, 2000);
 
         } else {
             reject("Error")

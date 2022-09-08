@@ -17,10 +17,13 @@ function NavBar() {
                 <a className="nav-link" href="#"><button className='buttonNavBar'>Todos</button></a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link" href="#"><button className='buttonNavBar'>2D</button></a>
+                <a className="nav-link" href="#"><button className='buttonNavBar'>Cuadros</button></a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link" href="#"><button className='buttonNavBar'>3D</button></a>
+                <a className="nav-link" href="#"><button className='buttonNavBar'>Llaveros</button></a>
+              </li>
+              <li className="nav-item active">
+                <a className="nav-link" href="#"><button className='buttonNavBar'>Peluches</button></a>
               </li>
             </ul>
           </div>

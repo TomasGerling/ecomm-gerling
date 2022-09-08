@@ -1,26 +1,20 @@
-import { useEffect } from "react"
-import ItemListContainer from "../Containers/ItemListContainer"
+import Products from "./utils/Products"
 
 const ItemList = (props) => {
-    useEffect(()=> {
-        
-    }, [] )
     return(
         <>
-        {props.item.map(item => (
-            <ItemListContainer
+        {Products.map(item => (
+            <Products
                 key={item.id}
                 title={item.title}
                 developerCompany={item.developerCompany}
                 img={item.img}
                 description={item.description}
-                gameCategory={item.gameCategory}
+                productCategory={item.productCategory}
                 stock={item.stock}
                 />
         ))}
         </>
     )
-
 }
-
 export default ItemList

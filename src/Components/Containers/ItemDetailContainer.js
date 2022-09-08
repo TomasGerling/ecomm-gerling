@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import desafio from "../utils/promesa";
-import ItemDetail from "../Components/ItemDetail";
-import Item from "../utils/Item"
+import ItemDetail from "../ItemDetail";
+import Item from "../utils/Products"
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});
