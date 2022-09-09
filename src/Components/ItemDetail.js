@@ -1,13 +1,11 @@
-import { useEffect } from "react";
 import ItemCount from "./ItemCount";
 
-const onAdd = (qty) => {
-    alert("Has seleccionado " + qty + " articulos.")
-}
 const ItemDetail = ({item}) => {
-    useEffect(()=> {
-        
-    }, [] )
+
+    const onAdd = (qty) => {
+        alert("Has seleccionado " + qty + " articulos.")
+}
+
     return(
         <>
         {
@@ -18,11 +16,11 @@ const ItemDetail = ({item}) => {
             <div className="itemDetailTitle">
                 <h3>{item.title}</h3>
             </div>
-            <div className="itemDetailCompany">{item.developerCompany}</div>
+            <p className="itemDetailCompany">{item.developerCompany}</p>
             <div className="itemDetailDescription">
                 <p>{item.description}</p>
             </div>
-            <div className="itemDetailPrice">{item.price}</div>
+            <p className="itemDetailPrice">{item.price}</p>
             <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
         </div>
         : <p>Cargando...</p>

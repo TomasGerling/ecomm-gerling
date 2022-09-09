@@ -1,6 +1,7 @@
 import logo from '../Assets/logo.jpg';
 import './NavBar.css';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 
 function NavBar() {
@@ -9,21 +10,21 @@ function NavBar() {
       <div className="NavBar">
         <div className="shopLogo">
           <img src={logo} className="logo"></img>
-          <a className="navbar-brand" href="#"><button className='buttonNavBar'>RetroGames Shop</button></a>
+          <Link to="/"><button className='buttonNavBar'>RetroGames Shop</button></Link> 
         </div>
           <div className="gamesCategory" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto ">
               <li className="nav-item active">
-                <a className="nav-link" href="#"><button className='buttonNavBar'>Todos</button></a>
+                <Link to="/"><button className='buttonNavBar'>Todos</button></Link>
               </li>
               <li className="nav-item active">
-                <a className="nav-link" href="#"><button className='buttonNavBar'>Cuadros</button></a>
+                <Link to="/category/1"><button className='buttonNavBar'>Cuadros</button></Link> 
               </li>
               <li className="nav-item active">
-                <a className="nav-link" href="#"><button className='buttonNavBar'>Llaveros</button></a>
+                <Link to="/category/2"><button className='buttonNavBar'>Tazas</button></Link>
               </li>
               <li className="nav-item active">
-                <a className="nav-link" href="#"><button className='buttonNavBar'>Peluches</button></a>
+                <Link to="/category/3"><button className='buttonNavBar'>Peluches</button></Link>
               </li>
             </ul>
           </div>
