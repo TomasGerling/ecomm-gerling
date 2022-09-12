@@ -2,10 +2,6 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item}) => {
 
-    const onAdd = (qty) => {
-        alert("Has seleccionado " + qty + " articulos.")
-}
-
     return(
         <>
         {

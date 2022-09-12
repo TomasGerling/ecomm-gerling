@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import desafio from "../utils/promesa";
 import ItemDetail from "../ItemDetail";
-import Products from "../utils/Products"
+import products from "../utils/Products"
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});
 
     useEffect(() => {
-        desafio(2000, Products[1])
+        desafio(2000, products[4])
             .then(result => setDato(result))
             .catch(err => console.log(err))
     }, [])

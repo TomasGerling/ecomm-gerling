@@ -1,4 +1,4 @@
-const Products = [
+const products = [
     {
     id:1,
     price:"$450",
@@ -90,4 +90,4 @@ const Products = [
     description: "Wonder Boy  es una franquicia de videojuegos publicada por Sega y desarrollada por Westone Bit Entertainment (anteriormente Escape). Comenzando con el juego de arcade Wonder Boy original lanzado el 21 de abril de 1986, el juego ha generado varias secuelas lanzadas para máquinas recreativas, Master System y Sega Genesis, así como tres títulos de compilación y tres nuevas versiones de otros desarrolladores."
     },
     ]
-export default Products
+export default products
