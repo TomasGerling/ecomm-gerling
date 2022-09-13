@@ -46,7 +46,7 @@ const ItemList = () => {
     const {id} = useParams()
     useEffect(() =>{
         if(id){
-            desafio(Data.filter(item => item.categoryId == id))
+            desafio(Data.filter(item => item.categoryId === id))
             .then(res => setProducts(res));
         }else{
             desafio(Data)
