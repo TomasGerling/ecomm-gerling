@@ -5,8 +5,9 @@ import { useEffect, useState } from "react"
  * decrements the counter
  * @returns The component is returning a JSX element.
  */
-const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
-    const [count, setCount] = useState(0);
+
+const ItemCount = ({stock = 0, initial = 0, onAdd}) => {
+    const [count, setCount] = useState(1);
     
     useEffect(() => {
         setCount(initial)
@@ -30,9 +31,9 @@ return (
             <div className= "productAmount">{count}</div>
             <button className="circlePlus" variant="Text" onClick={increment}>+</button>
             {
-                stock
+                stock && count
                 ? <button className="addCart" variant="contained" onClick={() => onAdd(count)}> Agregar al carrito</button>
-                : <button variant="contained"></button>
+                : <button variant="contained">Agregar al carrito</button>
             }
             </div>
         </>
