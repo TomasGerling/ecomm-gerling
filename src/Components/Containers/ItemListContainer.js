@@ -1,9 +1,14 @@
 import ItemList from "../ItemList"
+const ItemListContainer = (props) =>{
 
-
-const ItemListContainer = () =>{
     return(
-        <ItemList></ItemList>
+        <div className="listContainer">
+            <h2 className="listTitle">
+                {props.greeting}
+            </h2>
+            <ItemList></ItemList>
+        </div>
+        
     )
 }
 export default ItemListContainer

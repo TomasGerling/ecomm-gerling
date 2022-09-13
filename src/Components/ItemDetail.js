@@ -1,20 +1,10 @@
-import { useEffect } from "react";
 import ItemCount from "./ItemCount";
 
-const onAdd = (qty) => {
-    alert("Has seleccionado " + qty + " articulos.")
-}
+
 const ItemDetail = ({item}) => {
-    useEffect(()=> {
-        
-    }, [] )
     return(
-        <>
-        {
-        item.img
-        ?
         <div className="itemDetailContainer">
-            <img src={item.img[1]} alt=""/>
+            <img src={item.img} alt="x"/>
             <div className="itemDetailTitle">
                 <h3>{item.title}</h3>
             </div>
@@ -23,13 +13,11 @@ const ItemDetail = ({item}) => {
                 <p>{item.description}</p>
             </div>
             <div className="itemDetailPrice">{item.price}</div>
-            <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+            <ItemCount stock={item.stock} initial={1}/>
         </div>
-        : <p>Cargando...</p>
-        }
-        </>
+
     );
 
 }
 
-export default ItemDetail;
+export default ItemDetail

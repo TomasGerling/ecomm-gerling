@@ -1,40 +1,33 @@
-import Products from "./utils/products"
-import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
-import desafio from "./utils/promesa"
-import Item from "./Item"
+import {useState, useEffect } from 'react';
+import desafio from './utils/promesa'
+import Data from './utils/data';
+import Item from './Item'
+import {useParams}from 'react-router-dom'
 
-const ItemList = (props) => {
+const ItemList = () => {
     const [products, setProducts] = useState([])
-    const { id } = useParams();
-
+    const {id} = useParams()
     useEffect(() =>{
-        if (id) {
-        desafio(2000, products.filter(item => item.categoryId === parseInt(id)))
-            .then(result => setProducts(result))
-            .catch(err => console.log(err))
-        } else {
-        desafio(products)
-            .then(result => setProducts(result))
-            .catch(err => console.log(err))
-        }
+        if(id){
+            desafio(Data.filter(item => item.categoryId == id))
+            .then(res => setProducts(res));
+        }else{
+            desafio(Data)
+            .then(res => setProducts(res));
+        };
     }, [id])
+
+    const itemElements = products.map(Data => {
+        return <Item key={Data.id} img={Data.img} id={Data.id} title={Data.title} price={Data.price} stock={Data.stock} description={Data.description} initial={1} />
+    })
+
+
     return(
-        <>
-        <Item>
-        {Products.map(item => (
-            <Products
-                key={item.id}
-                title={item.title}
-                developerCompany={item.developerCompany}
-                img={item.img}
-                description={item.description}
-                productCategory={item.productCategory}
-                stock={item.stock}
-                />
-        ))}
-        </Item>
-        </>
+
+        <div className="productsList">
+            {itemElements}
+        </div>
     )
 }
+
 export default ItemList

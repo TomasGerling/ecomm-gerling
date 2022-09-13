@@ -1,26 +1,19 @@
-import ItemCount from "./ItemCount"
-import products from "./utils/products"
+import { Link } from "react-router-dom"
 
 
-const Item = (props) => {
+
+export default function Item (props){
     const onAdd = (qty) => {
         alert("Has seleccionado " + qty + " articulos.")
     }
     return (
-        <div className="productsList">
-        {
-        products.map(item => (
         <div className="product">
-            <span className="productPrice">{item.price}</span>
-            <img className="productImage" src={item.img} alt=""></img>
-            <h4 className="productTitle">{item.title}</h4>
+            <span className="productPrice">{props.price}</span>
+            <img className="productImage" src={props.img} alt=""></img>
+            <h4 className="productTitle">{props.title}</h4>
             <hr/>
-            <p>Descripción: {item.description}</p>
-            <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
-        </div>
-        ))
-        }
+            <p>Descripción: {props.description}</p>
+            <Link to={`/item/${props.id}`}><button className="detailBtn">Ver detalles</button></Link>
         </div>
     )
 }
-export default Item
