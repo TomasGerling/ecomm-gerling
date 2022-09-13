@@ -10,7 +10,7 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
     
     useEffect(() => {
         setCount(initial)
-    },[])
+    },[])// eslint-disable-next-line
 
     const increment = () =>{
         if (count < stock) {

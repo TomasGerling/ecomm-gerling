@@ -3,9 +3,7 @@ import { Link } from "react-router-dom"
 
 
 export default function Item (props){
-    const onAdd = (qty) => {
-        alert("Has seleccionado " + qty + " articulos.")
-    }
+
     return (
         <div className="product">
             <span className="productPrice">{props.price}</span>
