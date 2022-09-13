@@ -1,14 +1,15 @@
 import ItemCount from "./ItemCount";
 
+<<<<<<< HEAD
 const ItemDetail = ({item}) => {
 
+=======
+
+const ItemDetail = ({item}) => {
+>>>>>>> develop
     return(
-        <>
-        {
-        item.img
-        ?
         <div className="itemDetailContainer">
-            <img src={item.img[1]} alt=""/>
+            <img src={item.img} alt="x"/>
             <div className="itemDetailTitle">
                 <h3>{item.title}</h3>
             </div>
@@ -16,14 +17,17 @@ const ItemDetail = ({item}) => {
             <div className="itemDetailDescription">
                 <p>{item.description}</p>
             </div>
+<<<<<<< HEAD
             <p className="itemDetailPrice">{item.price}</p>
             <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+=======
+            <div className="itemDetailPrice">{item.price}</div>
+            <ItemCount stock={item.stock} initial={1}/>
+>>>>>>> develop
         </div>
-        : <p>Cargando...</p>
-        }
-        </>
+
     );
 
 }
 
-export default ItemDetail;
+export default ItemDetail

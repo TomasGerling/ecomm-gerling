@@ -1,5 +1,10 @@
 import NavBar from "./Components/NavBar";
 import "./App.css"
+<<<<<<< HEAD
+=======
+import ItemDetailContainer from "./Components/Containers/ItemDetailContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+>>>>>>> develop
 import ItemListContainer from "./Components/Containers/ItemListContainer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -8,10 +13,17 @@ const App = () => {
         <BrowserRouter>
         <NavBar />
         <Routes>
+<<<<<<< HEAD
             <Route path='/' element={<ItemListContainer />}/>
             {/* <Route path='/category/:id' element={<ItemListContainer />}/> */}
         </Routes>
         <ItemListContainer/>
+=======
+            <Route exact  path="/" element={<ItemListContainer greeting="Productos"/>}  />
+            <Route exact path="/category/:id" element={<ItemListContainer greeting ="Categoria:"/>} />
+            <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
+>>>>>>> develop
         </BrowserRouter>
     )
 }
