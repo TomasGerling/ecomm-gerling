@@ -6,6 +6,7 @@
     grid-row-gap: 10px;
     margin-top: 10px;
     list-style: none;
+    justify-items: center;
 }
 div.product {
     display: grid;

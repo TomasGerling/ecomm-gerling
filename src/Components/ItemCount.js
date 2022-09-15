@@ -33,7 +33,7 @@ return (
             {
                 stock && count
                 ? <button className="addCart" variant="contained" onClick={() => onAdd(count)}> Agregar al carrito</button>
-                : <button variant="contained">Agregar al carrito</button>
+                : <button className="addCart" variant="contained">Debes tener 1 producto para añardirlo al carrito</button>
             }
             </div>
         </>
