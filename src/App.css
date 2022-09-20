@@ -79,3 +79,27 @@ div.ProductAmountContainer button{
     color: white;
     border-radius: 100%;
 }
+.cartCant{
+    margin-left: 25px;
+}
+
+.cartTitlesContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.shoppingCartImage{
+    max-height: 225px;
+    max-width: 225px;
+}
+
+.shoppingCartItemTitle{
+    margin-left: 100px;
+}
+
+.cartTotalPrice{
+    border: 5px solid black;
+    margin: 20px;
+    margin-top: 10px;
+    font-weight: bolder;
+}

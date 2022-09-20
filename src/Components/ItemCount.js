@@ -1,40 +1,38 @@
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 
-/**
- * It's a function that returns a div with a button that increments a counter and a button that
- * decrements the counter
- * @returns The component is returning a JSX element.
- */
-
-const ItemCount = ({stock = 0, initial = 0, onAdd}) => {
+const ItemCount = ({ Stock, initial, onAdd }) => {
     const [count, setCount] = useState(1);
-    
-    useEffect(() => {
+    const [stock, setStock] = useState(1);
+    console.log(Stock)
+    useEffect (() => {
         setCount(initial)
-    },[])// eslint-disable-next-line
+        setStock(Stock)
+    }, [Stock, initial])
 
-    const increment = () =>{
-        if (count < stock) {
-            setCount(count + 1)
+    const increment = () => {
+        if(count === stock) {
+            setCount(stock)
+        }else{
+            setCount(prevCount => prevCount +1)
         }
     }
 
-    const decrement = () =>{
-        if (count > initial)
-        setCount(count - 1)
-    }
-    
+    const decrement = () => {
+        if (count === initial) {
+          setCount(1);
+        } else if (count > stock) {
+          setCount(0);
+        } else {
+          setCount((prevCount) => prevCount - 1);
+        }
+      };
 return (
         <>
             <div className="ProductAmountContainer">
                 <button className="circleMinus" variant="Text" onClick={decrement}>-</button>
             <div className= "productAmount">{count}</div>
             <button className="circlePlus" variant="Text" onClick={increment}>+</button>
-            {
-                stock && count
-                ? <button className="addCart" variant="contained" onClick={() => onAdd(count)}> Agregar al carrito</button>
-                : <button className="addCart" variant="contained">Debes tener 1 producto para añardirlo al carrito</button>
-            }
+            <button className="addCart" onClick={() => { onAdd(stock, count);}}>Comprar</button>
             </div>
         </>
 );

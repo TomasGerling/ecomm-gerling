@@ -1,25 +1,33 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import ItemCount from "./ItemCount";
 
 
-const ItemDetail = ({item}) => {
-    const [itemCount, setItemCount] = useState(0)
-    const test = useContext(CartContext)
-    
-    const onAdd = (qty) => {
-        alert("Has seleccionado " + qty + " articulos.")
-        setItemCount(qty);
-        console.log(item.id);
-        test.addItem(item, qty, item.id);
+const ItemDetail = ({ item }) => {
+    const test = useContext(CartContext);
+    const [itemCount, setItemCount] = useState(1);
+    const [itemStock, setItemStock] = useState(1);
+    const [added, setAdded] = useState(false);
 
-}
-    return(
+    useEffect(() => {
+        setItemCount(item.quantity);
+        setItemStock(item.stock);
+    }, [item]);
+
+    const onAdd = (stock, count) => {
+        alert(
+            `Has agregado ${
+                count > 1 ? `${count} productos` : `${count} producto`
+            } al carrito`
+        );
+        setItemStock(stock - count);
+        setAdded(true);
+        test.addItem(item, count);
+    };
+
+    return (
         <div>
-        {
-            item && item.img
-            ?
             <div className="itemDetailContainer">
                 <img src={item.img} alt="x"/>
                 <div className="itemDetailTitle">
@@ -29,18 +37,23 @@ const ItemDetail = ({item}) => {
                 <div className="itemDetailDescription">
                     <p>{item.description}</p>
                 </div>
-                <div className="itemDetailPrice">{item.price}</div>
-                {
-                itemCount === 0
-                ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
-                : <Link to="/cart"><button>Al carrito</button></Link>
-                }
+                <div className="itemDetailPrice">${item.price}</div>
+                <div className="addToCartSection">
+                {added === false 
+                ?   (
+                    <ItemCount Stock={itemStock} initial={itemCount} onAdd={onAdd}/>
+                ) : (
+                    <Link to="/cart">
+                        <button>
+                        Ir al carrito
+                        </button>
+                    </Link>
+                )}
+                    <p className="itemDescription">Disponibles: {itemStock}</p>
+                </div>
             </div>
-            :<p>Cargando...</p>
-        }
         </div>
+        
     );
-
-}
-
-export default ItemDetail
+};
+export default ItemDetail;
