@@ -13,7 +13,6 @@ const ItemDetailContainer  = () => {
     useEffect(() => {
         firestoreFind(id)
             .then(result => {
-                console.log(result)
                 setDato(result)
             })
             .catch(error => console.error(error))
