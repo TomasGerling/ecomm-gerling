@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail";
-import Data from "../utils/data"
-import desafio from "../utils/promesa";
+import { firestoreFind } from "../utils/firebaseConfig";
+
 
 const ItemDetailContainer  = () => {
     const [dato, setDato] = useState({})
@@ -11,8 +11,12 @@ const ItemDetailContainer  = () => {
     
     
     useEffect(() => {
-        desafio(Data.find(item => item.id === parseInt(id)))
-        .then(res => setDato(res));
+        firestoreFind(id)
+            .then(result => {
+                console.log(result)
+                setDato(result)
+            })
+            .catch(error => console.error(error))
     }, [id])
     
     return(

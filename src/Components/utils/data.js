@@ -18,7 +18,7 @@ const Data = [
     stock: 45,
     img: "https://upload.wikimedia.org/wikipedia/en/4/41/Legend_of_zelda_cover_%28with_cartridge%29_gold.png",
     categoryId: "1",
-    quantity: 45,
+    quantity: 1,
     description: "The Legend of Zelda es un videojuego japonés desarrollado y publicado por Nintendo en 1986, y diseñado por Shigeru Miyamoto y Takashi Tezuka para la consola Nintendo Entertainment System"
     },
     {
@@ -57,7 +57,7 @@ const Data = [
     {
     id:6,
     price:550,
-    title:"Taza Super Mario Bros Hongo Rojo" ,
+    title:"Taza Super Mario Bros Hongo Rojo",
     developerCompany: "Nintendo",
     stock: 18,
     img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/806/999/products/de2a42581-584d55f4570003799316616125010226-480-0.jpg",

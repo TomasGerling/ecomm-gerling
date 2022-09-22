@@ -103,3 +103,15 @@ div.ProductAmountContainer button{
     margin-top: 10px;
     font-weight: bolder;
 }
+
+div.itemDetailContainer{
+    display: flex;
+    flex-direction: column;
+}
+.itemDetailImg{
+    display: grid;
+    align-items: center;
+    max-width: 500px;
+    max-height: 500px;
+    margin:auto;
+}
