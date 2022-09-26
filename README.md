@@ -56,4 +56,6 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 * **Alex Marin Mendez** - *Profesor* - [Alex Marin Mendez](https://www.linkedin.com/in/alexmarinmendez/)
 * **Franco D'Angelo** - *Tutor* - [Franco D'Angelo](https://www.linkedin.com/in/franco-dangelo/)
 
+## Video en Youtube con el funcionamiento de la pagina 👌
+
 [![Alt text](https://img.youtube.com/vi/nQ_ESWfLQcI/0.jpg)](https://www.youtube.com/watch?v=nQ_ESWfLQcI)
