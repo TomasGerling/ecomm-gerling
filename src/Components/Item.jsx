@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import './Styles/item.css';
 
 export default function Item (props){
 

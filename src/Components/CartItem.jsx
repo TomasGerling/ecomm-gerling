@@ -19,7 +19,7 @@ const CartItem = (props) => {
                 <div
                 class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom">
                 <p>Cantidad:{props.quantity}</p>
-                <button onClick={() => props.removeItem(props.id)}>Eliminar producto</button>
+                <button className="deleteAllButton" onClick={() => props.removeItem(props.id)}>Eliminar producto</button>
                 </div>
             </div>
             </div>

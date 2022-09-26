@@ -4,6 +4,7 @@ import { useContext } from "react";
 import {CartContext} from "./CartContext";
 import CartItem from "./CartItem";
 import  {db}  from "./utils/firebaseConfig";
+import './Styles/cart.css';
 
 const Cart = () => {
 	const test = useContext(CartContext);
@@ -80,12 +81,12 @@ const Cart = () => {
 					</div>
 				)}
 				<div>
-					<button onClick={test.clear}>
+					<button className="deleteAllButton" onClick={test.clear}>
 						Borrar todo
 					</button>
 					<div className="totalSection">
 						<span className="cartTotalPrice">Total: ${test.TotalPrice}</span>
-						<button onClick={createOrder}>Comprar</button>
+						<button className="buyButton" onClick={createOrder}>Comprar</button>
 					</div>
 				</div>
 			</div>

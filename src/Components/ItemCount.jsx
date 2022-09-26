@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
+import './Styles/itemCount.css';
 
 const ItemCount = ({ Stock, initial, onAdd }) => {
     const [count, setCount] = useState(1);
     const [stock, setStock] = useState(1);
-    console.log(Stock)
     useEffect (() => {
         setCount(initial)
         setStock(Stock)
@@ -29,10 +29,10 @@ const ItemCount = ({ Stock, initial, onAdd }) => {
 return (
         <>
             <div className="ProductAmountContainer">
-                <button className="circleMinus" variant="Text" onClick={decrement}>-</button>
+                <button className="circlePlusMinus" variant="Text" onClick={decrement}>-</button>
             <div className= "productAmount">{count}</div>
-            <button className="circlePlus" variant="Text" onClick={increment}>+</button>
-            <button className="addCart" onClick={() => { onAdd(stock, count);}}>Comprar</button>
+            <button className="circlePlusMinus" variant="Text" onClick={increment}>+</button>
+            <button className="addItemToCart" onClick={() => { onAdd(stock, count);}}>Comprar</button>
             </div>
         </>
 );

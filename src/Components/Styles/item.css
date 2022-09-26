@@ -1,0 +1,71 @@
+div.product {
+    display: grid;
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: gray;
+}
+
+.ProductAmountContainer{
+    display: grid;
+    width: 100%;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "circleMinus productAmount circlePlus"
+    "addCart addCart addCart"
+}
+
+.circlePlus{
+    display: flex;
+    justify-content: center;
+    grid-area: circlePlus;
+}
+.productAmount{
+    display: flex;
+    justify-content: center;
+    grid-area: productAmount;
+}
+.circleMinus{
+    display: flex;
+    justify-content: center;
+    grid-area: circleMinus;
+}
+.addCart{
+    grid-area: addCart;
+}
+
+div.ProductAmountContainer button{
+    background-color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 4px solid lighten(gray, 70%);
+}
+
+.productImage {
+    width: 50%;
+    max-width: none;
+}
+
+.productTitle {
+    font-size: 30px;
+    color: black;
+}
+
+.productPrice {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 250px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+}

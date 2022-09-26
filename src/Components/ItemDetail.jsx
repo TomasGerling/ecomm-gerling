@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import ItemCount from "./ItemCount";
+import './Styles/itemDetail.css';
 
 
 const ItemDetail = ({ item }) => {
@@ -44,7 +45,7 @@ const ItemDetail = ({ item }) => {
                     <ItemCount Stock={itemStock} initial={itemCount} onAdd={onAdd}/>
                 ) : (
                     <Link to="/cart">
-                        <button>
+                        <button className="addItemToCart">
                         Ir al carrito
                         </button>
                     </Link>
